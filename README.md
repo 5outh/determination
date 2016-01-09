@@ -14,4 +14,4 @@ $ determination CMD
 
 #### Example
 
-![Determination](http://giphy.com/gifs/determination-3oxRmh6RObIqfhF7ag)
+![Determination](http://i.giphy.com/3oxRmh6RObIqfhF7ag.gif)
