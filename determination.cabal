@@ -1,0 +1,33 @@
+name:                determination
+version:             0.1.0.0
+synopsis:            Adds determination to your life
+description:         Please see README.md
+homepage:            http://github.com/5outh/determination
+license:             BSD3
+license-file:        LICENSE
+author:              Benjamin Kovach
+maintainer:          bkovach13@gmail.com
+copyright:           2016 Benjamin Kovach
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Determination
+  build-depends:       base >= 4.7 && < 5
+                     , turtle
+                     , text
+  default-language:    Haskell2010
+
+executable determination
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , determination
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/5outh/determination
