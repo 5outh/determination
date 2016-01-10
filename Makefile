@@ -1,0 +1,2 @@
+install:
+	determination "stack install"
