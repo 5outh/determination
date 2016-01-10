@@ -57,13 +57,16 @@ Preprocessing library determination-0.1.0.0...
 `----'   `-' `-'   `----'    `-----'   `----'   `----'             
 ```
 
-Instead, let's wrap it with `determination` in a Makefile:
+Let's wrap it with `determination` in a Makefile so we can be less sad when things fail:
 
 ```
+# Makefile
 install:
   determination "stack install"
 ```
 
+![Determination](https://zippy.gfycat.com/NextGratefulFeline.gif)
+
 #### Special Thanks
 
-To Toby Fox for undertale, which inspired this.
+To Toby Fox for making undertale, which inspired this little project.

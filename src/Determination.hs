@@ -50,6 +50,3 @@ run = do
     Just cmd -> shell cmd empty >>= \case
       ExitSuccess -> return ()
       ExitFailure _ -> stayDetermined
-
-someExtraThing :: Bool
-someExtraThing = 1
