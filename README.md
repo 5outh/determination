@@ -16,7 +16,7 @@ One thing I do often while working on a computer that fails a lot is compilation
 
 To build and register this project, I run one command:
 
-```
+```bash
 $ stack install
 ```
 
@@ -24,12 +24,12 @@ but, when I need to make changes, compilation often fails for some reason or ano
 
 For example, imagine I added this to `Determination.hs`:
 
-```
+```haskell
 someExtraThing :: Bool
 someExtraThing = 1
 ```
 
-```
+```bash
 $ stack install
 determination-0.1.0.0: unregistering (local file changes: src/Determination.hs)
 determination-0.1.0.0: build
@@ -59,7 +59,7 @@ Preprocessing library determination-0.1.0.0...
 
 Let's wrap it with `determination` in a Makefile so we can be less sad when things fail:
 
-```
+```bash
 # Makefile
 install:
   determination "stack install"
