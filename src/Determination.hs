@@ -5,6 +5,7 @@ module Determination
     ( run
     ) where
 
+import Control.Monad.Random
 import           Control.Concurrent (threadDelay)
 import           Control.Monad      (forM_, liftM)
 import           Data.Monoid        ((<>))
@@ -33,10 +34,20 @@ getUser = liftM
     (ExitFailure _, _) -> "Frisk")
   (shellStrict "echo $USER" empty)
 
+starters :: [String]
+starters =
+  [ "You cannot give up just yet..."
+  , "It cannot end now!"
+  , "Don't lose hope!"
+  , "You're going to be alright!"
+  , "Our fate rests on you..."
+  ]
+
 stayDetermined :: IO ()
 stayDetermined = do
   user <- getUser
-  typewrite "\nYou cannot give up just yet...\n"
+  starter <- uniform starters
+  typewrite ("\n" <> starter <> "\n")
   waitSeconds 0.75
   typewrite (unpack (user <> "!\n"))
   waitSeconds 0.5
